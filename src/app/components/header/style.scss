@@ -1,0 +1,37 @@
+@import "../../styles/variable";
+
+.header-bg-transparant{
+background-color: transparent !important;
+}
+
+.mega-menu{
+    width: 800px;
+    left: 60%;
+    transform: translateX(-40%);
+    a{
+        color: $white;
+        transition: all 0.3s ease;
+    }
+    a:hover{
+        color: $white-hover;
+    }
+}
+
+.show-header{
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.hide-header{
+    transform: translateY(-66px);
+    transition: all 0.3s ease;
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) { 
+    .mega-menu{
+        width: auto;
+        left: 0;
+        transform: none;
+    }
+ }
