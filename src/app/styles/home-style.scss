@@ -182,4 +182,49 @@
         font-size: 55px;
         font-weight: 700;
     }
+    .testimonial{
+      font-weight: 300;
+      .testimonial-card{
+        padding: 24px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .left-qoute{
+          color: $very-light-grey;
+          font-size: 90px;
+          position: absolute;
+          left: 0;
+          top: -20px;
+          z-index: -1;
+        }
+        .right-qoute{
+          color: $very-light-grey;
+          font-size: 90px;
+          position: absolute;
+          right: 0;
+          bottom: -20px;
+          z-index: -1;
+        }
+        .content{
+          font-size: 20px;
+          color: $black;
+          position: relative;
+          padding: 24px;
+        }
+        h6{
+          font-size: 18px;
+          color: $black;
+          margin-bottom: 8px;
+          font-weight: 400;
+        }
+        p{
+          font-size: 14px;
+          color: $grey;
+        }
+        .user-image{
+          border-radius: 50%;
+        }
+      }
+    }
 }

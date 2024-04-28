@@ -1,8 +1,50 @@
+'use client'
 import "./styles/home-style.scss";
 import Image from "next/image";
-
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import { MdChevronRight } from "react-icons/md";
+import { ImQuotesLeft } from "react-icons/im";
+import { ImQuotesRight } from "react-icons/im";
 
 export default function Home() {
+
+  const options = {
+    type: 'loop',
+    gap: '1rem',
+    autoplay: true,
+    pauseOnHover: false,
+    resetProgress: false,
+  };
+
+  const testimonial = [
+    { 
+      name: 'John Snow1',
+      designation: 'CEO',
+      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
+      img:'/user-img.jpg'
+     },
+    { 
+      name: 'John Snow2',
+      designation: 'CEO',
+      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
+      img:'/user-img.jpg'
+     },
+    { 
+      name: 'John Snow3',
+      designation: 'CEO',
+      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
+      img:'/user-img.jpg'
+     },
+    { 
+      name: 'John Snow4',
+      designation: 'CEO',
+      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
+      img:'/user-img.jpg'
+     },
+    
+  ]
+
   return (
     <main>
       <section className="first-section motion-color">
@@ -132,7 +174,7 @@ export default function Home() {
         <div className="container">
           <h3 className="mb-4">
             Explore Argon’s solutions that can make you ready for today and the
-            future.​
+            future.
           </h3>
           <nav>
             <div
@@ -288,7 +330,7 @@ export default function Home() {
                 Build the future. <br />
                 Open collaboration.
               </h3>
-              <Image width={540} height={431} src={"/pic-5.jpg"} alt={""}/>
+              <Image width={540} height={431} src={"/pic-5.jpg"} alt={""} />
             </div>
             <div className="col-lg-6">
               <div className="row g-4">
@@ -343,14 +385,36 @@ export default function Home() {
       </section>
       <section className="sixth-section">
         <div className="container">
-        <h3>Get in touch</h3>
-        <p>We are here to help your business reach its goals</p>
-        <button className="btn btn-brand-primary">Contact Us</button>
+          <h3>Get in touch</h3>
+          <p>We are here to help your business reach its goals</p>
+          <button className="btn btn-brand-primary">Contact Us</button>
         </div>
       </section>
       <section className="seventh-section">
         <div className="container">
           <h3 className="mb-4">What People Think About Us</h3>
+          <Splide hasTrack={false} options={options}>
+            <SplideTrack>
+              {
+                testimonial.map((ele, index) => {
+                  return (<SplideSlide key={index} className="testimonial">
+                    <div className="testimonial-card">
+                      <Image width={100} height={100} className="img-fluid user-image" src={'/user-img.jpg'} alt=""/>
+                      <div className="content">{ele.testimonial}
+                        <ImQuotesLeft className="left-qoute" />
+                        <ImQuotesRight className="right-qoute" /></div>
+                      <h6>{ele.name}</h6>
+                      <p>{ele.designation}</p>
+                    </div>
+                  </SplideSlide>)
+                })
+              }
+            </SplideTrack>
+            <div className="splide__arrows">
+              <button className="splide__arrow splide__arrow--prev"><MdChevronRight /></button>
+              <button className="splide__arrow splide__arrow--next"><MdChevronRight /></button>
+            </div>
+          </Splide>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leoLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leoLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leoLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leoLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leoLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
         </div>
       </section>
