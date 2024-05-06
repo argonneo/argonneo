@@ -5,6 +5,7 @@ import "./styles/globals.scss";
 import BoostrapClient from "./components/bootstrap";
 import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
+import ScrollUpBtn from "@/components/scroll-up-btn/page";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["100", "200", "300","400", "500", "600","700","800","900"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollUpBtn/>
       </body>
       <BoostrapClient />
     </html>

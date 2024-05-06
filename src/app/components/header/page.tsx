@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import "./style.scss";
 import useDetectScroll from "@smakss/react-scroll-direction";
+import Link from "next/link";
 
 const Header = () => {
   const { scrollDir, scrollPosition } = useDetectScroll();
@@ -10,7 +11,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg bg-dark fixed-top ${
+        className={`navbar navbar-expand-lg bg-dark fixed-top py-3 ${
           scrollDir === "down" && scrollPosition.top > 100
             ? "hide-header"
             : "show-header"
@@ -18,9 +19,9 @@ const Header = () => {
         data-bs-theme="dark"
       >
         <div className="container">
-          <a className="navbar-brand" href="#">
-            <Image width={120} height={40} className="" src="logo.svg" alt="" />
-          </a>
+          <Link className="navbar-brand" href="/">
+            <Image width={120} height={40} className="" src="/common/logo.svg" alt="" />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -42,7 +43,7 @@ const Header = () => {
                   width={120}
                   height={40}
                   className=""
-                  src="logo.svg"
+                  src="/common/logo.svg"
                   alt=""
                 />
               </h5>
@@ -66,17 +67,17 @@ const Header = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="/about-us/argon-bank">
                         Argon Bank
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="/about-us/board-of-directors">
                         Board of Directors
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
@@ -258,7 +259,7 @@ const Header = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="../../contact-us">
                     Contact Us
                   </a>
                 </li>

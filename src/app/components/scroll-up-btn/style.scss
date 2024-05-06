@@ -1,0 +1,19 @@
+@import '../../styles/variable';
+
+.scroll-up-btn{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 0;
+    padding: 16px;
+    background-color: $brand-primary;
+    border-radius: 16px;
+    text-decoration: none;
+    color: $white-hover;
+    border: 1px solid $brand-primary;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $white-hover;
+        color:$brand-primary
+    }
+}

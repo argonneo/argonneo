@@ -1,196 +1,223 @@
 @import "./variable";
 
-.motion-color {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: linear-gradient(
-    45deg,
-    #005a67,
-    #54302e,
-    #005a67,
-    #222222,
-    #005a67,
-    #54302e
-  );
-  background-size: 600% 100%;
-  animation: gradient 16s linear infinite;
-  animation-direction: alternate;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0%;
+.home {
+  .motion-color {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(45deg,
+        #005a67,
+        #54302e,
+        #005a67,
+        #222222,
+        #005a67,
+        #54302e);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
   }
-  100% {
-    background-position: 100%;
-  }
-}
 
-.first-section {
-  padding: 216px 80px 200px 80px;
-  background-color: $brand-primary;
-  h1 {
-    font-size: 65px;
-    color: white;
-    span {
-      background: #9e6562;
-      background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  @keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+
+    100% {
+      background-position: 100%;
     }
   }
-  p {
-    color: $grey;
-  }
-}
 
-.second-section {
-  position: relative;
-  margin-top: -125px;
-  margin-bottom: -125px;
-  z-index: 10;
-  .floating-card {
-    position: relative;
-    height: 250px;
-    background-color: #9e6562;
-    background-image: url(../../../public/section-2-img.jpeg);
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 24px;
-    .content {
-      z-index: 10;
-      a {
-        color: white;
+  .first-section {
+    padding: 216px 80px 200px 80px;
+    background-color: $brand-primary;
+    h1 {
+      font-size: 65px;
+      color: white;
+
+      span {
+        background: #9e6562;
+        background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
+
     p {
-      color: $white;
-      z-index: 10;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $backdrop;
-      z-index: 1;
+      color: $grey;
     }
   }
-}
 
-.third-section {
-  background-color: transparent;
-  background-image: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
-  padding: 205px 0px 150px 0px;
-  color: $white-hover;
-  font-weight: 100;
-  h3 {
-    font-size: 60px;
-    span {
+  .second-section {
+    position: relative;
+    margin-top: -125px;
+    margin-bottom: -125px;
+    z-index: 10;
+
+    .floating-card {
+      position: relative;
+      height: 250px;
+      background-color: #9e6562;
+      background-image: url(../../../public/home/section-2-img.jpeg);
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding: 24px;
+
+      .content {
+        z-index: 10;
+
+        a {
+          color: white;
+        }
+      }
+
+      p {
+        color: $white;
+        z-index: 10;
+        font-weight: 500;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $backdrop;
+        z-index: 1;
+      }
+    }
+  }
+
+  .third-section {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #000000 0%, #4d4d4d 100%);
+    padding: 205px 0px 150px 0px;
+    color: $white-hover;
+    font-weight: 100;
+
+    h3 {
+      font-size: 60px;
+
+      span {
+        background: #9e6562;
+        background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .card-view {
+      h4 {
+        color: $light-blue;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      p {
+        color: $grey;
+        text-align: center;
+      }
+    }
+  }
+
+  .fourth-section {
+    padding: 100px 0px;
+
+    .tab-view {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+
+      img {
+        border-radius: 16px;
+      }
+    }
+
+    .nav-tabs .nav-link {
+      font-weight: 300;
+      color: $grey;
+    }
+
+    .nav-tabs .nav-link.active {
+      font-weight: 300;
+      color: $black;
+    }
+  }
+
+  .fifth-section {
+    padding: 100px 0;
+
+    h3 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      font-weight: 500;
       background: #9e6562;
       background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-  }
-  .card-view {
-    h4 {
-      color: $light-blue;
-      font-size: 28px;
-      text-align: center;
+
+    a {
+      color: $black;
     }
+  }
+
+  .sixth-section {
+    padding: 100px 0;
+    background-color: $light-grey;
+    text-align: center;
+    border-radius: 48px;
+
+    h3 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+
     p {
-      color: $grey;
-      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      background: #9e6562;
+      background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    button {
+      padding: 20px 30px;
+      border-radius: 50px;
     }
   }
-}
 
-.fourth-section {
-  padding: 100px 0px;
-  .tab-view {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-items: center;
-    padding: 24px;
-    img {
-      border-radius: 16px;
-    }
-  }
-  .nav-tabs .nav-link {
-    font-weight: 300;
-    color: $grey;
-  }
-
-  .nav-tabs .nav-link.active {
-    font-weight: 300;
-    color: $black;
-  }
-}
-
-.fifth-section {
-  padding: 100px 0;
-  h3 {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 24px;
-  }
-  h4 {
-    font-weight: 500;
-    background: #9e6562;
-    background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  a {
-    color: $black;
-  }
-}
-
-.sixth-section {
-  padding: 100px 0;
-  background-color: $light-grey;
-  text-align: center;
-  h3 {
-    font-size: 60px;
-    font-weight: 700;
-  }
-  p {
-    font-size: 48px;
-    font-weight: 700;
-    background: #9e6562;
-    background: linear-gradient(to right, #9e6562 0%, #0092a7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  button{
-    padding: 20px 30px;
-    border-radius: 50px;
-  }
-}
-
-.seventh-section{
+  .seventh-section {
     padding: 100px 0px;
     text-align: center;
-    h3{
-        font-size: 55px;
-        font-weight: 700;
+
+    h3 {
+      font-size: 55px;
+      font-weight: 700;
     }
-    .testimonial{
+
+    .testimonial {
       font-weight: 300;
-      .testimonial-card{
+
+      .testimonial-card {
         padding: 24px 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .left-qoute{
+
+        .left-qoute {
           color: $very-light-grey;
           font-size: 90px;
           position: absolute;
@@ -198,7 +225,8 @@
           top: -20px;
           z-index: -1;
         }
-        .right-qoute{
+
+        .right-qoute {
           color: $very-light-grey;
           font-size: 90px;
           position: absolute;
@@ -206,25 +234,31 @@
           bottom: -20px;
           z-index: -1;
         }
-        .content{
+
+        .content {
           font-size: 20px;
           color: $black;
           position: relative;
           padding: 24px;
         }
-        h6{
+
+        h6 {
           font-size: 18px;
           color: $black;
           margin-bottom: 8px;
           font-weight: 400;
         }
-        p{
+
+        p {
           font-size: 14px;
           color: $grey;
         }
-        .user-image{
+
+        .user-image {
           border-radius: 50%;
         }
       }
     }
+  }
+
 }

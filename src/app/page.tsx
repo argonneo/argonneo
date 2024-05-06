@@ -18,35 +18,35 @@ export default function Home() {
   };
 
   const testimonial = [
-    { 
+    {
       name: 'John Snow1',
       designation: 'CEO',
       testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
-      img:'/user-img.jpg'
-     },
-    { 
+      img: '/home/user-img.jpg'
+    },
+    {
       name: 'John Snow2',
       designation: 'CEO',
       testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
-      img:'/user-img.jpg'
-     },
-    { 
+      img: '/home/user-img.jpg'
+    },
+    {
       name: 'John Snow3',
       designation: 'CEO',
       testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
-      img:'/user-img.jpg'
-     },
-    { 
+      img: '/home/user-img.jpg'
+    },
+    {
       name: 'John Snow4',
       designation: 'CEO',
       testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque justo, suscipit eu cursus nec, congue id nunc. Nullam a quam molestie, semper libero vel, elementum ante. Quisque tristique neque quis imperdiet feugiat. Nullam nec urna et justo lobortis blandit. Praesent tempor nec velit non congue.",
-      img:'/user-img.jpg'
-     },
-    
+      img: '/home/user-img.jpg'
+    },
+
   ]
 
   return (
-    <main>
+    <main className="home">
       <section className="first-section motion-color">
         <div className="container">
           <div className="row">
@@ -127,7 +127,7 @@ export default function Home() {
                 width={340}
                 height={266}
                 className="img-fluid w-100 mb-4"
-                src={"/placeholder.png"}
+                src={"/common/placeholder.png"}
                 alt=""
               />
               <h4>Mobile-First Experience</h4>
@@ -142,7 +142,7 @@ export default function Home() {
                 width={340}
                 height={266}
                 className="img-fluid w-100 mb-4"
-                src={"/placeholder.png"}
+                src={"/common/placeholder.png"}
                 alt=""
               />
               <h4>Mobile-First Experience</h4>
@@ -157,7 +157,7 @@ export default function Home() {
                 width={340}
                 height={266}
                 className="img-fluid w-100 mb-4"
-                src={"/placeholder.png"}
+                src={"/common/placeholder.png"}
                 alt=""
               />
               <h4>Mobile-First Experience</h4>
@@ -239,7 +239,7 @@ export default function Home() {
               role="tabpanel"
               aria-labelledby="nav-home-tab"
             >
-              <div className="tab-view">
+              <div className="tab-view flex-lg-row flex-column-reverse">
                 <p className="fs-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Optio, neque qui velit. Magni dolorum quidem ipsam eligendi,
@@ -250,7 +250,7 @@ export default function Home() {
                   width={300}
                   height={250}
                   className="img-fluid"
-                  src={"/tab-img.jpg"} alt={""} />
+                  src={"/home/tab-img.jpg"} alt={""} />
               </div>
             </div>
             <div
@@ -259,7 +259,7 @@ export default function Home() {
               role="tabpanel"
               aria-labelledby="nav-profile-tab"
             >
-              <div className="tab-view">
+              <div className="tab-view flex-lg-row flex-column">
                 <p className="fs-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Optio, neque qui velit. Magni dolorum quidem ipsam eligendi,
@@ -270,7 +270,7 @@ export default function Home() {
                   width={300}
                   height={250}
                   className="img-fluid"
-                  src={"/tab-img.jpg"}
+                  src={"/home/tab-img.jpg"}
                   alt={""}
                 />
               </div>
@@ -281,7 +281,7 @@ export default function Home() {
               role="tabpanel"
               aria-labelledby="nav-contact-tab"
             >
-              <div className="tab-view">
+              <div className="tab-view flex-lg-row flex-column">
                 <p className="fs-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Optio, neque qui velit. Magni dolorum quidem ipsam eligendi,
@@ -292,7 +292,7 @@ export default function Home() {
                   width={300}
                   height={250}
                   className="img-fluid"
-                  src={"/tab-img.jpg"}
+                  src={"/home/tab-img.jpg"}
                   alt={""}
                 />
               </div>
@@ -303,7 +303,7 @@ export default function Home() {
               role="tabpanel"
               aria-labelledby="nav-disabled-tab"
             >
-              <div className="tab-view">
+              <div className="tab-view flex-lg-row flex-column">
                 <p className="fs-4">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Optio, neque qui velit. Magni dolorum quidem ipsam eligendi,
@@ -314,7 +314,7 @@ export default function Home() {
                   width={300}
                   height={250}
                   className="img-fluid"
-                  src={"/tab-img.jpg"}
+                  src={"/home/tab-img.jpg"}
                   alt={""}
                 />
               </div>
@@ -330,7 +330,7 @@ export default function Home() {
                 Build the future. <br />
                 Open collaboration.
               </h3>
-              <Image width={540} height={431} src={"/pic-5.jpg"} alt={""} />
+              <Image className="img-fluid" width={540} height={431} src={"/home/pic-5.jpg"} alt={""} />
             </div>
             <div className="col-lg-6">
               <div className="row g-4">
@@ -383,8 +383,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="sixth-section">
-        <div className="container">
+      <section className="container">
+        <div className="sixth-section">
           <h3>Get in touch</h3>
           <p>We are here to help your business reach its goals</p>
           <button className="btn btn-brand-primary">Contact Us</button>
@@ -399,7 +399,7 @@ export default function Home() {
                 testimonial.map((ele, index) => {
                   return (<SplideSlide key={index} className="testimonial">
                     <div className="testimonial-card">
-                      <Image width={100} height={100} className="img-fluid user-image" src={'/user-img.jpg'} alt=""/>
+                      <Image width={100} height={100} className="img-fluid user-image" src={ele.img} alt="" />
                       <div className="content">{ele.testimonial}
                         <ImQuotesLeft className="left-qoute" />
                         <ImQuotesRight className="right-qoute" /></div>

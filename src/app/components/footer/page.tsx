@@ -13,8 +13,8 @@ const Footer = () => {
           <div className="col-lg-3">
             <div className='d-flex flex-column gap-2'>
             <h6>Get our Mobile App</h6>
-            <Image className='img-fluid' width={195} height={68} src={'/apple-store-02.svg'} alt='' />
-            <Image className='img-fluid' width={195} height={68} src={'/playstore-01.svg'} alt='' />
+            <Image className='img-fluid' width={195} height={68} src={'/common/apple-store-02.svg'} alt='' />
+            <Image className='img-fluid' width={195} height={68} src={'/common/playstore-01.svg'} alt='' />
             </div>
           </div>
           <div className="col-lg-3">
